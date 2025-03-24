@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 10px;
+        }
+        body{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            color:white;
+            font-weight: 800;
+            font-size: 3rem;
+        }
+        p{
+            color:red;
+            box-shadow: 2px solid white;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <P>dum hai to  text copy kerkai dikho</P>
+    yai data ko copy kro or paste kro 1000$ milegai
+
+    <script>
+        document.addEventListener("copy",(event)=>{
+            event.preventDefault();
+        })
+        document.addEventListener("contextmenu",(event)=>{
+            event.preventDefault();
+        })
+        document.addEventListener("selectstart",(event)=>{
+            event.preventDefault();
+        })
+        document.addEventListener("cut",(event)=>{
+            event.preventDefault();
+        })
+        document.addEventListener("dragstart",(event)=>{
+            event.preventDefault();
+        })
+        document.onkeydown=function(e){
+            if(e.key=="f12" || e.ctrlKey && e.shiftKey && e.key==="I"){
+                e.preventDefault();
+            }
+        }
+    </script>
+</body>
+</html>
